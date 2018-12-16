@@ -1,0 +1,23 @@
+<form novalidate [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+  
+  <label>
+    WORK NAME:
+    <input type="text" formControlName="workName" placeholder="Enter work here">
+  </label>
+  <div *ngIf="formErrors.workName">{{formErrors.workName}}
+  </div>
+
+   <p>
+  <button type="submit" [disabled]="!profileForm.valid" class="background-primary text-floral-white">Submit</button>
+  </p>
+
+</form>
+
+<mat-list>
+  <mat-list-item *ngFor="let au of author">
+    <p mat-line>
+      <span>{{au}}</span>
+      <button type="button" class="background-accent text-floral-white" (click)="onclick(au)">&times; </button>
+    </p>
+  </mat-list-item>
+</mat-list>  

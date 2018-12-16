@@ -1,0 +1,16 @@
+<div class="container"
+     fxLayout="column"
+     fxLayoutGap="10px">
+
+  <mat-list fxFlex>
+    <mat-list-item *ngFor="let list of lists">
+      <h1 matLine> id- {{list.id}} </h1>
+      <p matLine>
+        <span> name- {{list.name}} </span>
+      </p>
+    </mat-list-item>
+  </mat-list>
+
+</div>
+
+
